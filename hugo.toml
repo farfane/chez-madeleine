@@ -1,0 +1,4 @@
+theme = 'madeleine'
+baseURL = 'https://chez-madeleine.fr/'
+languageCode = 'fr-fr'
+title = 'Chez Madeleine'

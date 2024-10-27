@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+<div class="bg-violet-200/75">
+  <div class="lg:container lg:mx-auto">
+
+    <div class="px-16 py-16">
+        {{ .Content }}
+    </div>
+
+  </div>
+</div>
+
+<div class="lg:container lg:mx-auto">
+  <div class="px-16 py-16">
+    {{ partial "gallery" (dict "context" . "gallery_dir" "/images") }}
+  </div>
+</div>
+
+<div class="lg:container lg:mx-auto">
+
+  <div class="px-16 py-16 ">
+
+    {{ range site.RegularPages }}
+      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+      <p>{{ .Summary }}</p>
+    {{ end }}
+
+  </div>
+
+</div>
+{{ end }}
